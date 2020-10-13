@@ -1,0 +1,130 @@
+:root {
+  --buttonColor: #938585d9;
+}
+
+body {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  width: max-content;
+  margin: 25px auto 25px auto;
+  background-color: #252525fa;
+  border-radius: 3px;
+  padding: 10px;
+}
+button {
+  color: white;
+  background-color: var(--buttonColor);
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: max-content;
+  padding: 10px;
+  cursor: pointer;
+}
+button:active {
+  outline: none;
+}
+button > * {
+  pointer-events: none;
+}
+.content {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+.button-info {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: var(--buttonColor);
+  cursor: pointer;
+}
+.button-close {
+  position: absolute;
+  text-align: right;
+  right: 0;
+  top: 0;
+  width: max-content;
+  background: none;
+  color: black;
+}
+.button-disco {
+  /* border-color: white; */
+  border-width: 2px;
+  border-style: outset;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--buttonColor),
+    #939393
+  );
+}
+.button-disco:hover {
+  border-style: inset;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: #000000de;
+  vertical-align: middle;
+}
+.modalContent {
+  color: black;
+  position: absolute;
+  /* left: 25%; */
+  /* top: 10%; */
+  background-color: #000000de;
+  width: 80%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.modalHeader {
+  background-color: gray;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.modalHeader > h5 {
+  margin: 0;
+  padding: 0;
+}
+.modalBody {
+  background-color: lightgray;
+  padding: 25px;
+}
+.modalFooter {
+  background-color: gray;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100%;
+  column-gap: 5px;
+  align-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    width: 50%;
+  }
+  .modalContent {
+    width: 30%;
+  }
+}
