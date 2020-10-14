@@ -10,12 +10,14 @@
 	</link>
 	<link rel="icon" type="image/png" href="/assets/icon.png">
 	<meta name="og:image" content="/assets/icon.png" />
-	<meta http-equiv="cache-control" content="no-cache" />
+	<meta name="description"
+		content="a dummy Hello World website + extra pizzazz to host on and explore features of netlify.com" />
+	<meta http-equiv=" cache-control" content="no-cache" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-	<button type="button" class="button-info" onClick="info()">
+	<button title="info" type="button" class="button-info" onClick="info()">
 		<span>
 			<i class="material-icons-round	">info</i>
 		</span>
@@ -26,7 +28,7 @@
 	</div>
 	<div id="modal" class="modal">
 		<div class="modalContent">
-			<button class="button-close" aria-label="close" style="grid-column: 2; align-items: right;"
+			<button title="close" class="button-close" aria-label="close" style="grid-column: 2; align-items: right;"
 				onclick="info()">&times;</button>
 			<div class="modalHeader">
 				<h5 style="grid-column: 1;">
@@ -35,15 +37,16 @@
 
 			</div>
 			<div class="modalBody">
-				<p>a dumb hello world website made by <a href="//github.com/kevinnls">kevinnls</a>
-					you can change the background colour by clicking on the <b>Disco!</b> button
+				<p>a dummy Hello World website + pizzazz made by <a href="//github.com/kevinnls">kevinnls</a></p>
+				<p>you can change the background colour by clicking on the <b>Disco!</b> button
 					or by pressing <b>enter/return</b> on your keyboard.</p>
-				<p>it was a dummy project to help understand features of <a href="//netlify.com">Netlify</a>
+				<p>it was a dummy project to explore features on <a target="_blank" href="//netlify.com">Netlify.</a>
 					but being as i am, i took too long and too much effort anyway! &#x1F389;</p>
 				<p> ~kevinnls </p>
 			</div>
 			<div class="modalFooter">
-				<a style="grid-column:2; vertical-align: middle;" href="//github.com/kevinnls/learning-netlify">
+				<a title="see the repo on GitHub" style="grid-column:2; vertical-align: middle;"
+					href="//github.com/kevinnls/learning-netlify">
 					<svg aria-label="GitHub Repository" viewBox="0 0 16 16" version="1.1" width="30" height="30"
 						role="img">
 						<path fill-rule="evenodd"
@@ -52,7 +55,8 @@
 					</svg>
 				</a>
 
-				<a style="grid-column:3; vertical-align: middle;" href="//github.com/kevinnls">
+				<a title="see my profile on GitHub" style="grid-column:3; vertical-align: middle;"
+					href="//github.com/kevinnls">
 					<svg aria-label="GitHub Profile" height="28" viewBox="0 0 16 16" version="1.1" width="28"
 						aria-hidden="true">
 						<path fill-rule="evenodd"
