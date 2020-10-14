@@ -3,7 +3,7 @@ window.onkeyup = (event) => {
     disco();
   } else if (
     event.keyCode === 27 &&
-    document.getElementById("modal").style.display === "block"
+    document.getElementById("modal").style.display === "flex"
   ) {
     info();
   } else if (event.key === "i") {
