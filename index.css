@@ -69,7 +69,7 @@ button > * {
     #939393
   );
 }
-.button-disco:hover {
+.button-disco:active {
   border-style: inset;
 }
 .modal {
