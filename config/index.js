@@ -13,13 +13,14 @@ window.onkeyup = (event) => {
 
 window.onclick = (event) => {
   const modal = document.getElementById("modal");
+  console.log(event.composedPath());
   if (
     event.target.nodeName === "BUTTON" ||
     event.target.classname === /.*button.*/
   ) {
     event.target.blur();
-    // } else if (event.target === modal) {
-    //   info();
+  } else if (event.target === modal) {
+    info();
   } else return true;
 };
 function disco() {
