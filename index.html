@@ -1,13 +1,8 @@
 <html>
 
 <head>
-	<title>Hello, Netlify! (+ disco lights!)</title>
 	<link rel="stylesheet" href="index.css">
 	<script src="index.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@1,700&display=swap" rel="stylesheet">
-	</link>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-	</link>
 	<link rel="icon" type="image/png" href="/assets/icon.png">
 	<meta property="og:title" content="Hello, Netlify! (+ disco lights!)" />
 	<meta property="og:image" content="/assets/icon.png" />
@@ -17,13 +12,14 @@
 		content="a dummy Hello World website + extra pizzazz to host on and explore features of netlify.com" />
 	<meta http-equiv=" cache-control" content="no-cache" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Hello, Netlify! (+ disco lights!)</title>
 </head>
 
 <body>
 	<button title="info" type="button" class="button-info" onClick="info()">
-		<span>
-			<i class="material-icons-round	">info</i>
-		</span>
+		<span><svg class="nav-icon">
+				<use xlink:href="/assets/icon-defs.svg#info-icon"></use>
+			</svg></span>
 	</button>
 	<div class="content">
 		<h1>Hello, Netlify!</h1>
@@ -31,13 +27,16 @@
 	</div>
 	<div id="modal" class="modal">
 		<div class="modalContent">
-			<button title="close" class="button-close" aria-label="close" style="grid-column: 2; align-items: right;"
-				onclick="info()">&times;</button>
+
 			<div class="modalHeader">
 				<h5 style="grid-column: 1;">
 					What is this website?
 				</h5>
-
+				<button title="close" class="button-close" aria-label="close"
+					style="grid-column: 2; align-items: right;" onclick="info()">
+					<span><svg>
+							<use xlink:href="/assets/icon-defs.svg#close-icon"></use>
+						</svg></span></button>
 			</div>
 			<div class="modalBody">
 				<p>a dummy Hello World website + pizzazz made by <a href="//github.com/kevinnls">kevinnls</a></p>
