@@ -23,6 +23,12 @@ window.onclick = (event) => {
     info();
   } else return true;
 };
+
+function displayDoc(display) {
+  display
+    ? (document.documentElement.style.display = "")
+    : (document.documentElement.style.display = "none");
+}
 function disco() {
   console.log("discooo!");
   let clr = { r: 0, g: 0, b: 0 };

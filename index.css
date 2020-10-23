@@ -1,81 +1,115 @@
-:root {
-  --buttonColor: #938585d9;
+* {
+  color: var(--text);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-
 body {
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  background-color: var(--background);
 }
 h1 {
-  width: max-content;
-  margin: 25px auto 25px auto;
-  background-color: #252525fa;
   border-radius: 3px;
   padding: 10px;
+  background-color: var(--accent-1-bright);
+  color: var(--text-inverse);
+  opacity: 90%;
 }
+
 button {
-  color: white;
-  background-color: var(--buttonColor);
-  border-radius: 5px;
-  border: 1px solid grey;
-  padding: 10px;
   cursor: pointer;
+  background-color: var(--accent-1-dull);
+  color: var(--text-inverse);
+  border: none;
+  margin: 7.5px;
+  user-select: none;
 }
-svg {
-  width: 24px;
-  height: 24px;
-}
+
 button:active {
   outline: none;
 }
+
 button > * {
   pointer-events: none;
 }
+
+svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-inverse);
+}
+
+a {
+  color: var(--accent-2-bright);
+}
+
+/*=====*/
+
+.nav {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--accent-1-bright);
+  fill: var(--text-inverse);
+  opacity: 65%;
+}
+
+.nav:hover {
+  opacity: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.button-close {
+  background: none;
+  fill: var(--text-inverse);
+}
+
+.button-close:hover svg {
+  fill: var(--accent-2-bright);
+}
+
+.button-disco {
+  margin: 5px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 38px;
+  box-shadow: 0px 0px 2px 1px var(--accent-1-bright);
+  font-weight: bold;
+  font-size: large;
+}
+
+.button-disco:hover {
+  filter: brightness(115%);
+}
+
+.social {
+  width: min-content;
+  height: min-content;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.social:hover {
+  box-shadow: 0 0 2px 1px var(--accent-1-bright);
+}
+
+/*=====*/
+
 .content {
   margin: auto;
   width: 90%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.button-info {
-  position: fixed;
-  right: 0;
-  top: 0;
-  margin: 5px;
-  padding: 0px;
-  border: none;
-  border-radius: 50%;
-  background: white;
-  color: var(--buttonColor);
-  cursor: pointer;
-}
-.button-info:hover {
-  box-shadow: lightgray 0px 2px 10px;
-}
-.button-close {
-  position: absolute;
-  text-align: right;
-  right: 0;
-  top: 0;
-  font-size: large;
-  width: max-content;
-  background: none;
-  color: black;
-}
-.button-close:hover {
-  color: rgb(184, 13, 13);
-}
-.button-disco {
-  border-width: 2px;
-  border-style: outset;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--buttonColor),
-    #939393
-  );
-}
-.button-disco:active {
-  border-style: inset;
-}
+
 .modal {
   display: none;
   position: fixed;
@@ -87,46 +121,60 @@ button > * {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background-color: #000000de;
-  vertical-align: middle;
 }
-.modalContent {
-  color: black;
+
+.modal::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  background-color: #000000de;
+  top: 0;
+  left: 0;
+  background-color: var(--accent-1-bright);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.modalContent {
+  color: var(--text);
   width: 80%;
-  margin: auto;
-  border: 1px solid black;
+  border: 1px solid var(--accent-1-dull);
   border-radius: 5px;
 }
+
 .modalHeader {
-  background-color: gray;
-  padding: 15px;
+  display: flex;
+  background-color: var(--accent-1-dull);
+  align-items: center;
+  justify-content: space-between;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.modalHeader > h5 {
-  margin: 0;
-  padding: 0;
+
+.modalHeader h5 {
+  margin: 7.5px;
+  padding: 1px 6px;
+  color: var(--text-inverse);
 }
+
 .modalBody {
-  background-color: lightgray;
-  padding: 25px;
+  background-color: var(--background);
+  padding: 5px 15px;
+  height: min-content;
 }
+
 .modalFooter {
-  background-color: gray;
+  background-color: var(--accent-1-dull);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 5px;
-  text-align: center;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 100%;
-  column-gap: 5px;
-  align-content: space-around;
-  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
 }
+
 @media only screen and (min-width: 768px) {
   .content {
     width: 50%;

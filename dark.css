@@ -1,0 +1,9 @@
+:root {
+  --background: rgb(31, 31, 31);
+  --text: rgb(250, 250, 250);
+  --text-inverse: rgb(0, 0, 0);
+  --accent-1-bright: #e9e9e9;
+  --accent-1-dull: #3b3b3b;
+  --accent-2-bright: #ff2e2e;
+  --accent-2-dull: #aa2020;
+}
